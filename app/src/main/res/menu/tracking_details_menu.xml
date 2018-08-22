@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@mipmap/ic_edit"
+        android:id="@+id/tracking_details_edit"
+        android:title="@string/edit_activity" />
+
+    <item
+        android:icon="@mipmap/ic_delete"
+        android:id="@+id/tracking_details_delete"
+        android:title="@string/Delete"/>
+</menu>

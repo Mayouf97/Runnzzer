@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".SettingsActivity"
+    android:layout_height="match_parent">
+
+    <!--Activity content-->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="wrap_content">
+
+
+        <!--Tool Bar-->
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tool_bar_height">
+
+
+            <ImageView
+                android:id="@+id/edit_activity_backButton"
+                android:onClick="backArrow"
+                android:src="@mipmap/ic_back_navigation"
+                android:layout_width="24dp"
+                android:layout_height="match_parent" />
+
+
+            <TextView
+                android:layout_gravity="center"
+                android:text="@string/settings"
+                android:textSize="@dimen/med_font_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </android.support.v7.widget.Toolbar>
+
+
+        <!--Space-->
+        <FrameLayout
+            android:background="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp" />
+
+
+        <TextView
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="14dp"
+            android:text="@string/unit"
+            android:textSize="@dimen/normal_font_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--unite-->
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/unit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/stoke_without_corners"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_font_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!--Unites select-->
+            <RadioGroup
+                android:id="@+id/group_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="changeDistanceUnite"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.81"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/mph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="changeDistanceUnite"
+                    android:text="@string/mi"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_font_size" />
+
+                <RadioButton
+                    android:id="@+id/km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="changeDistanceUnite"
+                    android:text="@string/km"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_font_size" />
+
+            </RadioGroup>
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+
+
+        <TextView
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="14dp"
+            android:text="@string/audio"
+            android:textSize="@dimen/normal_font_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--FeedBack Rate-->
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            android:background="@drawable/stoke_without_corners">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sound"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_font_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!--Unites select-->
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="changeDistanceUnite"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.81"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/sound_on_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="changeSoundSettings"
+                    android:text="@string/on"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_font_size" />
+
+                <RadioButton
+                    android:id="@+id/sound_off_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/off"
+                    android:onClick="changeSoundSettings"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_font_size" />
+
+            </RadioGroup>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+        <!--FeedBack Rate-->
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/feedback_rate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            android:background="@drawable/stoke_without_corners">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/feed_back_every"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_font_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/select_rate_button"
+                android:layout_width="@dimen/settings_edit_values_width_button"
+                android:layout_height="@dimen/settings_edit_values_height_button"
+                android:background="@drawable/stoke_button"
+                android:onClick="changeFeedBacksValue"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+        <TextView
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="14dp"
+            android:text="@string/display"
+            android:textSize="@dimen/normal_font_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <!--Map style-->
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/map_layout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/stoke_without_corners">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/map_style"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_font_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <Button
+                android:id="@+id/select_map_style_button"
+                android:layout_width="@dimen/settings_edit_values_width_button"
+                android:layout_height="@dimen/settings_edit_values_height_button"
+                android:background="@drawable/stoke_button"
+                android:onClick="changeMapStyle"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
+

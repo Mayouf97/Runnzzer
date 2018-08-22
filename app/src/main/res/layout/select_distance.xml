@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="0.5dp"
+    android:background="@color/colorAccent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:orientation="vertical"
+        android:layout_margin="1dp"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:id="@+id/select_distance_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="@string/Distance"
+            android:textColor="@color/white"
+            android:textSize="@dimen/med_font_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout4"
+            android:layout_width="@dimen/space_width"
+            android:layout_height="@dimen/space_height"
+            android:layout_marginTop="8dp"
+            android:background="@color/gray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/select_distance_title_text" />
+
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/feedback_number_picker_decimal"
+            android:layout_width="@dimen/number_picker_width"
+            android:layout_height="@dimen/number_picker_height"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.75"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout4"
+            app:np_dividerColor="@color/colorAccent"
+            app:np_dividerThickness="@dimen/space_height"
+            app:np_selectedTextColor="@color/white"
+            app:np_selectedTextSize="@dimen/large_font_size"
+            app:np_textColor="@color/gray"
+            app:np_textSize="@dimen/large_font_size" />
+
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/feedback_number_picker"
+            android:layout_width="@dimen/number_picker_width"
+            android:layout_height="@dimen/number_picker_height"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout4"
+            app:np_dividerColor="@color/colorAccent"
+            app:np_dividerThickness="@dimen/space_height"
+            app:np_selectedTextColor="@color/white"
+            app:np_selectedTextSize="@dimen/large_font_size"
+            app:np_textColor="@color/gray"
+            app:np_textSize="@dimen/large_font_size" />
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_height"
+            android:background="@color/colorAccent"
+            app:layout_constraintBottom_toTopOf="@+id/set_distance_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+        <Button
+            android:id="@+id/set_distance_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/set_button_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:text="@string/set"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:textSize="@dimen/med_font_size"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/feedback_number_picker" />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

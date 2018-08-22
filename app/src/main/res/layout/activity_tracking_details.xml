@@ -1,0 +1,383 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--Tool Bar-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tracking_details_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar_height"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/edit_activity_backButton"
+            android:onClick="backArrowClick"
+            android:src="@mipmap/ic_back_navigation"
+            android:layout_width="24dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:id="@+id/run_details_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="@dimen/large_font_size"
+            android:textStyle="bold"/>
+
+
+        <ImageView
+            android:id="@+id/tracling_details_menu_icon"
+            android:layout_marginRight="16dp"
+            android:layout_gravity="right"
+            android:onClick="menuClicked"
+            android:src="@mipmap/ic_menu"
+            android:layout_width="24dp"
+            android:layout_height="match_parent" />
+
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <!--Container-->
+    <LinearLayout
+        android:id="@+id/run_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--Layout Container for the Map fragment-->
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/map_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/map_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <!--Map Fragment-->
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <!--enter and exit full screen Icon-->
+            <ImageButton
+                android:id="@+id/zoom_button"
+                android:layout_width="@dimen/expand_button"
+                android:layout_height="@dimen/expand_button"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/black_circle_button"
+                android:onClick="onClick"
+                android:src="@mipmap/ic_full_screen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+        <!--Information Layout-->
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/map_layout"
+            app:layout_constraintVertical_bias="0.1">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/information_layout_height"
+                android:weightSum="2">
+
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:src="@mipmap/ic_timer_white"
+                        android:layout_width="24dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_height="match_parent" />
+
+
+                    <TextView
+                        android:text="@string/time"
+                        android:textSize="@dimen/med_font_size"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="16dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/run_details_duration"
+                        android:text="--"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="24dp"
+                        android:textSize="@dimen/large_font_size"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/information_layout_height"
+                android:weightSum="2">
+
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_marginLeft="16dp"
+                        android:src="@mipmap/ic_distance"
+                        android:layout_width="24dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/distance_title"
+                        android:text="@string/Distance"
+                        android:textSize="@dimen/med_font_size"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="16dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/run_details_distance"
+                        android:text="--"
+                        android:layout_marginLeft="24dp"
+                        android:textSize="@dimen/med_font_size"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/information_layout_height"
+                android:weightSum="2">
+
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_marginLeft="16dp"
+                        android:src="@mipmap/ic_pace"
+                        android:layout_width="24dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/pace_title"
+                        android:textSize="@dimen/med_font_size"
+                        android:textStyle="bold"
+                        android:text="@string/averageSpeed"
+                        android:layout_marginLeft="16dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/run_details_averageSpeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="24dp"
+                        android:text="--"
+                        android:textSize="@dimen/med_font_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/information_layout_height"
+                android:weightSum="2">
+
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:src="@mipmap/ic_burn_white_24dp"
+                        android:layout_width="24dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_height="match_parent" />
+
+
+                    <TextView
+                        android:text="@string/calories_text"
+                        android:textSize="@dimen/med_font_size"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="16dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="RtlHardcoded" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:text="@string/unKnown"
+                        android:layout_marginLeft="24dp"
+                        android:textSize="@dimen/med_font_size"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/information_layout_height"
+                android:weightSum="2">
+
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:src="@mipmap/ic_elevation_gain"
+                        android:layout_width="24dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_height="match_parent" />
+
+
+                    <TextView
+                        android:text="@string/elevation_gain"
+                        android:textSize="@dimen/med_font_size"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="16dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="RtlHardcoded" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/elevation_gain"
+                        android:layout_marginLeft="24dp"
+                        android:textSize="@dimen/med_font_size"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+

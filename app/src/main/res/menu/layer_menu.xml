@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/night_map_view"
+        android:title="@string/regular" />
+
+    <item
+        android:id="@+id/satellite_map_view"
+        android:title="@string/satellite" />
+
+    <item
+        android:id="@+id/terrain_map_view"
+        android:title="@string/terrain"/>
+
+</menu>

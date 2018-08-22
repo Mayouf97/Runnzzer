@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Tool Bar Height-->
+    <dimen name="tool_bar_height">60dp</dimen>
+
+    <!--Common Used Fonts Sizes-->
+    <dimen name="small_font_size">14sp</dimen>
+    <dimen name="normal_font_size">16sp</dimen>
+    <dimen name="med_font_size">18sp</dimen>
+    <dimen name="large_font_size">20sp</dimen>
+    <dimen name="xlarge_font_size">30sp</dimen>
+    <dimen name="extra_large">100sp</dimen>
+
+
+    <!--Tracking Details-->
+    <dimen name="map_height">150px</dimen>
+    <!--Duration & Distance & Pace & Calories-->
+    <dimen name="information_layout_height">50dp</dimen>
+
+
+    <!--Buttons And Images Sizes-->
+    <dimen name="gps_point">20dp</dimen>
+    <dimen name="start_button">82dp</dimen>
+    <dimen name="expand_button">50dp</dimen>
+
+    <!--Settings Buttons (Chose Map Style & feedBackRate)-->
+    <dimen name="settings_edit_values_width_button">90dp</dimen>
+    <dimen name="settings_edit_values_height_button">30dp</dimen>
+
+
+    <!--Gps Off Alert Dialog Button Sizes (width & height)-->
+    <dimen name="gps_button_width">95dp</dimen>
+    <dimen name="gps_button_height">35dp</dimen>
+
+
+    <!--Dialog Box Dimens-->
+    <dimen name="space_width">200dp</dimen>
+    <dimen name="space_height">0.5dp</dimen>
+    <dimen name="dialog_margin">1dp</dimen>
+
+    <!--Number Pickers Dimens -->
+    <dimen name="number_picker_width">50dp</dimen>
+    <dimen name="number_picker_height">110dp</dimen>
+    <dimen name="set_button_height">40dp</dimen>
+    <dimen name="number_picker_holder_layout_width">175dp</dimen>
+    <dimen name="number_picker_holder_layout_height">120dp</dimen>
+
+
+    <!--User Profile Dimens-->
+    <dimen name="user_profile_select_button_width">100dp</dimen>
+    <dimen name="user_profile_select_button_height">40dp</dimen>
+    <dimen name="user_profile_information_height">250dp</dimen>
+    <dimen name="edit_text_height">50dp</dimen>
+    <dimen name="edit_text_width">200dp</dimen>
+
+
+
+    <!--Drawable Basic Dimens-->
+    <dimen name="gray_background_stoke_width">0.5dp</dimen>
+    <dimen name="add_history_fab_button">60dp</dimen>
+
+
+    <!--Icons-->
+
+    <dimen name="small_icon_size">24dp</dimen>
+    <dimen name="normal_icon_size">32dp</dimen>
+
+
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Main Colors-->
+    <color name="colorPrimaryDark">#0e0e0e</color>
+    <color name="colorPrimary">#121212</color>
+    <color name="colorAccent">#ec2b00</color>
+
+    <!--Sec colors-->
+    <color name="white">#dfdfdf</color>
+    <color name="red_transparent">#e6ff0011</color>
+    <color name="colorPrimary_Transparent">#e6171d20</color>
+    <color name="transparent">#02ffffff</color>
+
+    <!---->
+    <color name="green">#00fd00</color>
+    <color name="orange">#e42c17</color>
+    <color name="gray">#585858</color>
+    <color name="red">#ff0011</color>
+    <color name="transparent_gray">#8f3b393b</color>
+
+</resources>

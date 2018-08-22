@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0.5dp"
+    android:background="@color/colorAccent">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/feedback_rate_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:text="@string/select_feedback_rate"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_font_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/feedback_number_picker"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35" />
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout4"
+            android:layout_width="@dimen/space_width"
+            android:layout_height="@dimen/space_height"
+            android:layout_marginTop="8dp"
+            android:background="@color/gray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/feedback_rate_title" />
+
+
+        <!--Number Picker-->
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/feedback_number_picker"
+            android:layout_width="@dimen/number_picker_width"
+            android:layout_height="@dimen/number_picker_height"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:np_dividerColor="@color/colorAccent"
+            app:np_dividerThickness="@dimen/space_height"
+            app:np_selectedTextColor="@color/white"
+            app:np_selectedTextSize="@dimen/large_font_size"
+            app:np_textColor="@color/gray"
+            app:np_textSize="@dimen/large_font_size" />
+
+
+        <Button
+            android:id="@+id/set_feedback_rate"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/set_button_height"
+            android:background="@color/colorPrimary"
+            android:text="@string/set"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_font_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_height"
+            android:background="@color/colorAccent"
+            app:layout_constraintBottom_toTopOf="@+id/set_feedback_rate" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

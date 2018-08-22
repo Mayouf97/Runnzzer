@@ -1,0 +1,35 @@
+<resources >
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!--Base Application Colors-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--Main Application Background-->
+        <item name="android:background">@color/colorPrimary</item>
+
+        <!--Font Style-->
+        <item name="android:fontFamily">@font/rajdhani_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+
+        <!--pop up menu style-->
+        <item name="android:popupMenuStyle">@style/PopUpStyle</item>
+
+    </style>
+
+
+
+    <!--Pop up Menu Style-->
+    <style name="PopUpStyle" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/med_font_size</item>
+        <item name="android:divider">@color/colorAccent</item>
+        <item name="android:itemBackground">@color/colorPrimary</item>
+    </style>
+
+</resources>

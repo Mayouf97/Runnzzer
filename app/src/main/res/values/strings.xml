@@ -1,0 +1,103 @@
+<resources>
+    <!--Activities Titles-->
+    <string name="app_name">Runnzzer</string>
+    <string name="map_activity_title">Live Tracking</string>
+    <string name="session_details_title">Activity Details</string>
+
+    <!--Common Use Labels-->
+    <string name="Speed">Speed</string>
+    <string name="Distance">Distance</string>
+    <string name="ok">OK</string>
+    <string name="km">km</string>
+    <string name="mi">mi</string>
+    <string name="km_speed">km/h</string>
+    <string name="mi_speed">mph</string>
+    <string name="meter">m</string>
+    <string name="averageSpeed">Avg Speed</string>
+
+    MainActivityHome Activity labels-->
+    <string name="total_distance_text">Total Distance</string>
+    <string name="time_text">hr:mm:ss</string>
+    <string name="calories_text">Calories</string>
+    <string name="time">Duration</string>
+    <string name="gps">GPS</string>
+    <string name="total_run_text">Activities</string>
+    <string name="start">start</string>
+
+    <!--Session Details Labels-->
+    <string name="overview">Overview</string>
+    <string name="pace">Pace</string>
+
+    <!--Setting activity Labels-->
+    <string name="settings">Settings</string>
+    <string name="unit">Unit</string>
+    <string name="audio">Audio</string>
+    <string name="sound">Sound</string>
+    <string name="on">on</string>
+    <string name="off">off</string>
+    <string name="audio_language">Audio Language</string>
+    <string name="display">Display</string>
+    <string name="map_style">Map Style</string>
+    <string name="customize_display">Customize Display</string>
+
+    <!--User Profile -->
+    <string name="profile">Profile</string>
+    <string name="user_name">User Name</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string name="weight">Weight (kg)</string>
+    <string name="height">Height (cm)</string>
+    <string name="unKnown">"?"</string>
+    <string name="set">Set</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+
+    <!--Dialog Boxes Labels-->
+    <string name="edit_text_hint">Enter the Pace</string>
+    <string name="enter_the_distance">Enter the Distance</string>
+    <string name="enter_the_calories">Enter the Calories</string>
+    <string name="enable_location_service">Enable Location Service !</string>
+    <string name="select_audio_language">Select Audio Language</string>
+    <string name="english">English</string>
+    <string name="germany">Germany</string>
+    <string name="french">French</string>
+    <string name="spanish">Spanish</string>
+    <string name="gps_text_dialog">Make sure your Gps Option are turned on to enable route tracking and collecting your activity information</string>
+    <string name="enable_it">Enable </string>
+    <string name="contine">Continue</string>
+    <string name="select_feedback_rate">Select feedBack Rate</string>
+    <string name="feed_back_every">Feed Back Every</string>
+    <string name="select_map_style">Select Map Style</string>
+    <string name="terrain">Terrain</string>
+    <string name="satellite">Satellite</string>
+    <string name="regular">Default</string>
+    <string name="kilometer">kiloMeters</string>
+    <string name="miles">miles</string>
+    <string name="select_display">Select Display</string>
+    <string name="elevation">Elevation</string>
+    <string name="elevation_gain">Max Elevation</string>
+
+    <!--Add Session Manually-->
+    <string name="_00_00">00:00</string>
+    <string name="date">Date </string>
+
+    <!--Drawer Menu-->
+    <string name="history">History</string>
+    <string name="help">Help</string>
+    <string name="user_profile">User Profile</string>
+    <string name="add_session">Add Session</string>
+    <string name="edit_activity">Edit Activity</string>
+    <string name="done">Done</string>
+    <string name="Delete">delete</string>
+    <string name="share">share</string>
+    <string name="enter_the_max_elevation">enter the max elevation</string>
+    <string name="enter_calories">enter calories</string>
+    <string name="just_keep_going">Just Keep Going</string>
+    <string name="title_activity_maps">Map</string>
+
+
+    <string name="admob_key">ca-app-pub-3768400908115672~3619591099</string>
+
+</resources>

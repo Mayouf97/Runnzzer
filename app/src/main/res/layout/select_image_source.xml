@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorAccent">
+
+
+    <!--Male-->
+    <Button
+        android:id="@+id/from_gallery"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginLeft="1dp"
+        android:text="@string/gallery"
+        android:textSize="@dimen/med_font_size"
+        android:textStyle="bold"
+        android:background="@color/colorPrimary"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+    <!--Divider-->
+    <FrameLayout
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_height"/>
+
+    <!--Female-->
+    <Button
+        android:id="@+id/from_camera"
+        android:layout_marginBottom="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginLeft="1dp"
+        android:text="@string/camera"
+        android:textSize="@dimen/med_font_size"
+        android:textStyle="bold"
+        android:background="@color/colorPrimary"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+</LinearLayout>
